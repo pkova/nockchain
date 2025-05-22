@@ -223,6 +223,9 @@ Common errors and their solutions:
 1. **Connection Errors**:
    - `Failed to dial peer`: Network connectivity issues, you may still be connected though.
    - `Handshake with the remote timed out`: Peer might be offline, not a fatal issue.
+  
+2. **Could not load mining kernel**
+   - We map 128GB for the Nock Stack but Linux disallows obvious overcommits by default. To allow overcommits: `sudo sysctl -w vm.overcommit_memory=1`
 
 ### How do I check wallet balance?
 
